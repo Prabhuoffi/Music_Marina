@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add this to your CSS file */
+.Modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 500px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  outline: none;
+  z-index: 1000;
+}
+
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 999;
+}
+
+/* Responsive design improvements */
+@media (min-width: 768px) {
+  .Modal {
+    width: 60%;
+    max-width: 400px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .Modal {
+    width: 40%;
+    max-width: 350px;
+  }
+}
+body {
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.flex-row {
+  flex-wrap: wrap;
+}
+
+.event-card {
+  max-width: 100%;
+}
